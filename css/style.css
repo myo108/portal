@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    color:rgba(255, 255, 255, 0.6);
+    
+}
+
+::selection{
+    background:rgba(88,87,85,1);
+    color:white
+}
+.ui-tooltip {
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+	font-size: 0.5rem;
+	box-shadow: none;
+}
+a,a:active{
+    color:rgba(255,255,255,0.2);
+    text-decoration: none;
+    transition: all .3s;
+}
+a:hover{
+    color:rgba(255,255,255,0.5);
+    transition: all .3s;
+}
+#mainContainer{
+    display: flex;
+    min-height: 100vh;
+}
+#FF,#TRPG{
+    width: 0;
+    min-height: 100vh;
+    background-color: #383636;
+}
+#FFcontent,#TRPGcontent{
+    padding-top: 2rem;
+    opacity: 0;
+}
+#TRPGcontent{
+    position: relative;
+}
+#adventureplate{
+    max-width: 75%;
+}
+#main{
+    background: linear-gradient(184deg, rgba(88,87,85,1) 0%,  rgba(88,87,85,0.4) 100%);
+    width: 100vw;
+    min-height: 100vh;
+}
+#main>*{
+    position: relative;
+    top:30vh;
+}
+#main img{
+    max-width: 150px;
+    min-width: 50px;
+    border-radius: 300px;
+
+}
+#main p span{
+    margin: 10px;
+}
+#toFF,#toTRPG{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color:rgba(255,255,255,0.2);
+    transition: all .3s;
+    display: inline-block;
+}
+#toFF:hover,#toTRPG:hover{
+    color:rgba(255,255,255,0.8);
+    transition: all .3s;
+}
+@media(max-width: 1024px){
+    #toFF,#toTRPG{
+        font-size: 1rem;
+        color:rgba(255,255,255,0.2);
+        transition: all .3s;
+        padding: 0.7rem;
+    }
+    #main img{
+        max-width: 100px;
+        min-width: 50px;
+        border-radius: 300px;
+    
+    }
+}
+#cleared{
+    margin: 2rem;
+    display: flex;
+}
+#filter{
+    margin:1em;
+}
+.btn{
+    color:white;
+    transform: rotate(-90deg);
+    text-align: center;
+    background: linear-gradient(90deg, #7c7c7c 0%,#595656 40%, #3EA0CD 100%);
+    background-position: 1% 50%;
+    background-size: 200% auto;
+    margin-bottom: 5rem;
+    width: 60px;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    transition: 0.3s ease;
+    opacity: 0.9;
+    position: relative;
+    top:1.5rem
+}
+.btn:hover{
+    background-position: 50% 50%;
+    cursor: default;
+    opacity:1;
+}
+.btn.active{
+    background-position: 100% 50%;
+    opacity:1;
+
+}
+
+#scenarioBG{
+    position: relative;
+    left:-3.5rem;
+    padding: 3rem;
+    padding-left: 5rem;
+    text-align: left;
+    background-color: #2b2a2a;
+    width: 65vw;
+    column-count:   2;
+    min-height:20vh;
+}
+
+@media(max-width: 1024px){
+    #scenarioBG{
+        position: relative;
+        left:-3.5rem;
+        padding:2rem;
+        text-align: left;
+        background-color: #2b2a2a;
+        width: 100vw;
+        column-count: 1;
+    }
+    #scenarioDiv{
+        height: 70vh;
+        overflow: hidden;
+        overflow-y: visible;
+    }
+    #scenarioDiv{
+        height: 70vh;
+        overflow: hidden;
+        overflow-y: visible;
+    }
+}
+
+.linktobox{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    color:#383636;
+}
+.linktobox:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+    color:#3836368e;
+}
