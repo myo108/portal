@@ -70,6 +70,7 @@ a:hover{
     color:rgba(255,255,255,0.2);
     transition: all .3s;
     display: inline-block;
+    cursor: default;
 }
 #toFF:hover,#toTRPG:hover{
     color:rgba(255,255,255,0.8);
