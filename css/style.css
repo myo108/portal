@@ -60,13 +60,13 @@ a:hover{
     #adventureplate{
         position: relative;
         left: -2.5rem;
-        top:6rem;
+        top:7rem;
         max-width: 100vw;
         transform: rotate(-90deg);
     }
     #FFcontent>p{
         position: relative;
-        top:5rem;
+        top:8rem;
         margin-top: 1rem;
         padding: 3rem;
     }
