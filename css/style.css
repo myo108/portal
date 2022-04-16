@@ -260,8 +260,8 @@ a:hover{
 @media(max-width: 480px){
     .linktobox{
         position: relative;
-        top: 3rem;
-        margin-top: 5rem;
+        top: 2.5rem;
+        margin-top: 2rem;
         background-color: white;
         padding: 0.5rem;
         border-radius: 5px;
