@@ -28,7 +28,7 @@ a:hover{
 #mainContainer{
     display: flex;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 #FF,#TRPG{
     width: 0;
@@ -46,7 +46,7 @@ a:hover{
     position: relative;
 }
 #TRPGcontent .caption p{
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 @media(max-width: 480px){
     #TRPGcontent .caption p{
@@ -244,6 +244,9 @@ a:hover{
 }
 
 .linktobox{
+    position: relative;
+    top: 1.5rem;
+    margin-top: 5rem;
     background-color: white;
     padding: 0.7rem;
     border-radius: 5px;
