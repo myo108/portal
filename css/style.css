@@ -196,6 +196,8 @@ a:hover{
     text-align: left;
     background-color: #2b2a2a;
     column-count:   3;
+    min-height: 50vh;
+    min-width: 50vw;
 }
 
 @media(max-width: 1024px){
@@ -225,10 +227,9 @@ a:hover{
         #scenarioBG{
         position: relative;
         left:-3.5rem;
-        padding:2rem;
+        padding: 1.5rem;
         text-align: left;
         background-color: #2b2a2a;
-        width: 100vw;
         column-count: 1;
     }
     #scenarioDiv{
