@@ -133,8 +133,13 @@ a:hover{
 }
 
 #cleared{
-    margin: 1rem;
+    margin: 2rem;
     display: flex;
+}
+@media(max-width: 480px){
+    #cleared{
+        margin: 1rem;
+    }
 }
 #filter{
     margin:1em;
@@ -190,9 +195,7 @@ a:hover{
     padding-left: 5rem;
     text-align: left;
     background-color: #2b2a2a;
-    column-count:   2;
-    min-height:20vh;
-    max-height: 70vh;
+    column-count:   3;
 }
 
 @media(max-width: 1024px){
