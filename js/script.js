@@ -76,25 +76,4 @@ $(document).ready(function(){
             "transition":'all 1s',
         })
     })
-    $('#btnAll').click(function(){
-        $(this).addClass('active');
-        $('#btn2022').removeClass('active');
-        $('#btn2021').removeClass('active');
-        $('.2022').fadeIn();
-        $('.2021').fadeIn();
-    })
-    $('#btn2022').click(function(){
-        $(this).addClass('active');
-        $('#btnAll').removeClass('active');
-        $('#btn2021').removeClass('active');
-        $('.2022').fadeIn();
-        $('.2021').fadeOut();
-    })
-    $('#btn2021').click(function(){
-        $(this).addClass('active');
-        $('#btnAll').removeClass('active');
-        $('#btn2022').removeClass('active');
-        $('.2022').fadeOut();
-        $('.2021').fadeIn();
-    })
 })

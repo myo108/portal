@@ -16,12 +16,12 @@ body{
 	font-size: 0.5rem;
 	box-shadow: none;
 }
-a,a:active{
+#main a,#main a:active{
     color:rgba(255,255,255,0.2);
     text-decoration: none;
     transition: all .3s;
 }
-a:hover{
+#main a:hover{
     color:rgba(255,255,255,0.5);
     transition: all .3s;
 }
@@ -39,14 +39,18 @@ a:hover{
     padding-top: 2rem;
     opacity: 0;
 }
+#FFcontent .caption{
+    margin-top: 5rem;
+    font-size: 16px;
+}
 #FFcontent>img{
-    margin-top: 1rem;
+    margin-top: 0rem;
 }
 #TRPGcontent{
     position: relative;
 }
 #TRPGcontent .caption p{
-    margin-top: 3rem;
+    margin-top: 5rem;
     font-size: 16px;
 }
 @media(max-width: 480px){
@@ -61,15 +65,14 @@ a:hover{
     #adventureplate{
         position: relative;
         left: -2.5rem;
-        top:7rem;
+        top:6rem;
         max-width: 100vw;
         transform: rotate(-90deg);
     }
-    #FFcontent>p{
+    #FFcontent .adr{
         position: relative;
-        top:8rem;
-        margin-top: 1rem;
-        padding: 3rem;
+        top: 10rem;
+        padding: 0.5rem 0.8rem;
     }
 }
 #main{
@@ -133,18 +136,28 @@ a:hover{
 }
 
 #cleared{
-    margin: 2rem;
+    position: relative;
+    margin: 2rem 0;
     display: flex;
+    left: -1em;
 }
-@media(max-width: 480px){
-    #cleared{
-        margin: 1rem;
-    }
-}
-#filter{
-    margin:1em;
-}
-.btn{
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .filters {
+    position: relative;
+    top: 1em;
+    left: -1em;
+    margin: 0;
+    width: 130px;
+  }
+   
+  .filters * {
+    display: inline-block;
+  }
+  .filters label {
     color:white;
     transform: rotate(-90deg);
     text-align: center;
@@ -153,61 +166,56 @@ a:hover{
     background-size: 200% auto;
     margin-bottom: 5rem;
     width: 60px;
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 0.8em 2em;
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
     transition: 0.3s ease;
     opacity: 0.9;
     position: relative;
     top:1.5rem
-}
-.btn:hover{
+  }
+   
+  .filters label:hover {
     background-position: 50% 50%;
     cursor: default;
     opacity:1;
+  }  
+  [value="All"]:checked ~ #scenarioBG #scenarioDiv[data-category] {
+    display: block;
+  }
+    [value="2022"]:checked ~ #scenarioBG #scenarioDiv .clearedScenario:not([data-category~="2022"]),
+    [value="2021"]:checked ~ #scenarioBG #scenarioDiv .clearedScenario:not([data-category~="2021"]),
+    [value="KP"]:checked ~ #scenarioBG #scenarioDiv .clearedScenario:not([data-category~="KP"]) {
+        display: none;
 }
-.btn.active{
+[value="All"]:checked ~ .filters [for="All"],
+[value="2022"]:checked ~ .filters [for="2022"],
+[value="2021"]:checked ~ .filters [for="2021"],
+[value="KP"]:checked ~ .filters [for="KP"]{
     background-position: 100% 50%;
-    opacity:1;
-
 }
-
-@media(max-width: 480px){
-    #filter{
-        margin-top: 0;
-        margin-right:2rem
-    }
-    .btn{
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-bottom: 3.2rem;
-    }
-}
-
 
 #scenarioBG{
+    border-radius: 0 2em 0 0;
     position: relative;
-    left:-3.5rem;
+    left: -3.5rem;
     padding: 3rem;
-    padding-left: 5rem;
+    padding-left: 4rem;
     text-align: left;
     background-color: #2b2a2a;
-    column-count:   3;
+    column-count: 3;
     min-height: 50vh;
-    min-width: 50vw;
+    min-width: 65vw;
 }
 
 @media(max-width: 1024px){
     #scenarioBG{
         position: relative;
-        left:-3.5rem;
-        padding:1rem 2rem;
+        left: -3.5rem;
+        padding: 1rem 2rem;
         text-align: left;
         background-color: #2b2a2a;
-        width: 100vw;
+        min-width: 57vw;
         max-height: 70vh;
         column-count: 1;
     }
@@ -219,9 +227,11 @@ a:hover{
 }
 @media(max-width: 480px){
     #cleared{
+        margin: 1rem;
+        transform: scale(0.85);
         position: relative;
-        top:-1rem;
-        left:-3rem;
+        top: -3.5rem;
+        left: -4.5rem;
         width: 90vw;
     }
         #scenarioBG{
@@ -238,6 +248,14 @@ a:hover{
         overflow-y: visible;
     }
 }
+p>a{
+    color:rgba(255, 255, 255, 0.6);
+    transition: .3s ease;
+    text-decoration: none;
+}
+p>a:hover{
+    color:white;
+}
 
 .linktobox{
     position: relative;
@@ -248,12 +266,16 @@ a:hover{
     padding: 0.7rem;
     border-radius: 5px;
     color:#383636;
+    text-decoration: none;
+    transition: .3s ease;
 }
 .linktobox:hover{
     background-color: rgba(255, 255, 255, 0.568);
     color:#3836368e;
 }
-
+#FFcontent .linktobox{
+    margin-right: 0;
+}
 @media(max-width: 480px){
     .linktobox{
         position: relative;
@@ -269,7 +291,4 @@ a:hover{
         background-color: rgba(255, 255, 255, 0.568);
         color:#3836368e;
     }
-}
-.newest{
-    margin-top: 0;
 }
