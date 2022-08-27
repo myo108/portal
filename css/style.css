@@ -57,6 +57,10 @@ body{
     #TRPGcontent .caption p{
         font-size: 0.5rem;
     }
+    #FFcontent .caption{
+        margin-top: 3rem;
+        font-size: 16px;
+    }
 }
 #adventureplate{
     max-width: 75%;
@@ -65,13 +69,13 @@ body{
     #adventureplate{
         position: relative;
         left: -2.5rem;
-        top:6rem;
+        top:4rem;
         max-width: 100vw;
         transform: rotate(-90deg);
     }
     #FFcontent .adr{
         position: relative;
-        top: 10rem;
+        top: 7rem;
         padding: 0.5rem 0.8rem;
     }
 }
@@ -273,9 +277,7 @@ p>a:hover{
     background-color: rgba(255, 255, 255, 0.568);
     color:#3836368e;
 }
-#FFcontent .linktobox{
-    margin-right: 0;
-}
+
 @media(max-width: 480px){
     .linktobox{
         position: relative;
