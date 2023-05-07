@@ -9,54 +9,71 @@
     <script src="js/script.js"></script>
     <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div id="mainContainer">
     <div id="FF">
         <div id="FFcontent">
-            <div><a href="https://poipiku.com/166461/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-paintbrush"></i>FFXIV絵置き場</a><a href="https://myo108.github.io/IslandSanctuaryMap/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-map-location-dot"></i>無人島採集マップ(仮)</a></div>
+            <div><a href="https://poipiku.com/166461/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class='bx bx-paint' ></i>FFXIV絵置き場</a><a href="https://myo108.github.io/IslandSanctuaryMap/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class='bx bx-map-alt' ></i>無人島採集マップ(仮)</a></div>
             <p class="caption">※絵置き場腐向け/ネタバレ注意</p>
             <img src="img/adventureplate.png" alt="" id="adventureplate">
-            <p class="adr"><i class="fa-solid fa-house"></i>Gaia, Tiamat, The Goblet, W17-P39</p>
-                <p class="adr"><i class="fa-solid fa-camera"></i>Gaia, Tiamat, Shirogane, W17, Kobai Goten, Room 8</p>
+            <p class="adr"><i class='bx bxs-home' ></i>Gaia, Tiamat, The Goblet, W17-P39</p>
+                <p class="adr"><i class='bx bxs-camera' ></i>Gaia, Tiamat, Shirogane, W17, Kobai Goten, Room 8</p>
         </div>
     </div>
     <div id="main">
-        <img src="img/profile.jpg" alt="" id="profile">
-        <p><div id="toFF"><i class="fa-solid fa-angle-left"></i>FFXIV</div><div id="toTRPG">TRPG<i class="fa-solid fa-angle-right"></i></div></p>
-        <a href="https://twitter.com/myo108_"><i class="fa-brands fa-twitter"></i></a>
+        <div class="mainContainer">
+            <img src="img/profile.jpg" alt="" id="profile">
+            <p><div id="toFF"><i class='bx bxs-left-arrow'></i>FFXIV</div><div id="toTRPG">TRPG<i class='bx bxs-right-arrow' ></i></div></p>
+            <ul>
+                <li><a href="https://twitter.com/myo108_"><i class='bx bxl-twitter' ></i>Twitter</a></li>
+                <li><a href="https://myo.booth.pm"><i class='bx bxs-store'></i>Booth</a></li>
+            </ul>
+        </div>
+
+        
     </div>
     <div id="TRPG">
         <div id="TRPGcontent">
-            <a href="https://poipiku.com/3526140/" class="linktobox"><i class="fa-solid fa-paintbrush"></i>TRPG絵置き場</a><a href="https://myo108.github.io/TRPGmemo/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-dice-d20"></i>TRPGキャラメモ</a>
+            <a href="https://poipiku.com/3526140/" class="linktobox"><i class='bx bx-paint' ></i>TRPG絵置き場</a><a href="https://myo108.github.io/game-ishTRPGCS/" class="linktobox" target="_blank" rel="noreferrer noopener"><i class='bx bxs-dice-6' ></i>TRPGキャラメモ</a>
             <div class="caption"><p>クリア済みシナリオリスト<br>（システム不問）
             </p></div>
             <div id="cleared">
                 <input type="radio" id="All" name="categories" value="All" checked>
+                <input type="radio" id="2023" name="categories" value="2023">
                 <input type="radio" id="2022" name="categories" value="2022">
                 <input type="radio" id="2021" name="categories" value="2021">
                 <input type="radio" id="KP" name="categories" value="KP">
     
                 <ol class="filters">
                     <li>
-                      <label for="All">All</label>
+                        <label for="All">All</label>
                     </li>
                     <li>
-                      <label for="2022">2022</label>
+                        <label for="2023">2023</label>
                     </li>
                     <li>
-                      <label for="2021">2021</label>
+                        <label for="2022">2022</label>
+                    </li>
+                    <li>
+                        <label for="2021">2021</label>
                     </li>
                     <li>
                         <label for="KP">KP可</label>
-                      </li>
-                  </ol>
+                    </li>
+                </ol>
 
                 <div id="scenarioBG">
                     <div id="scenarioDiv">
-                        <!-- <p class="clearedScenario" data-category=""><a href="" target="_blank" rel="noreferrer noopener"></a></p> -->
+                        <template>
+                            <p class="clearedScenario" data-category=""><a href="" target="_blank" rel="noreferrer noopener"></a></p>
+                        </template>
+                        <p class="clearedScenario" data-category="2023"><a href="https://96664626.booth.pm/items/4550439" target="_blank" rel="noreferrer noopener">俺たちはリア充じゃないから爆発しない</a></p>   
+                        <p class="clearedScenario" data-category="2023 KP"><a href="波が立つから、淡いまま。" target="_blank" rel="noreferrer noopener">波が立つから、淡いまま。</a></p>
                         <p class="clearedScenario" data-category="2022"><a href="https://www.pixiv.net/novel/show.php?id=9232553" target="_blank" rel="noreferrer noopener">庭師は何を口遊む</a></p>    
                         <p class="clearedScenario" data-category="2022"><a href="https://heysha-onsha.booth.pm/items/4343429" target="_blank" rel="noreferrer noopener">HO1の達人</a></p>
                         <p class="clearedScenario" data-category="2022 KP"><a href="https://7hu4gi.booth.pm/items/4017212" target="_blank" rel="noreferrer noopener">まよなかあくじ</a></p>
